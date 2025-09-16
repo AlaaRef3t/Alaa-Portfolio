@@ -133,7 +133,7 @@ export default function MyInfoComp() {
             <motion.div variants={fadeUp} className="mt-8 grid grid-cols-3 max-w-sm gap-2">
               <motion.div variants={pop} className="flex flex-col items-center rounded-lg bg-white/60 px-2 py-3 text-center ring-1 ring-[#0a1f44]/10 shadow-sm">
                 <Briefcase className="h-4 w-4 text-[#00897b] mb-1" />
-                <div className="text-lg font-bold text-[#0a1f44]">1+</div>
+                <div className="text-lg font-bold text-[#0a1f44]">0+</div>
                 <div className="text-[11px] text-[#374151]">Years</div>
               </motion.div>
               <motion.div variants={pop} className="flex flex-col items-center rounded-lg bg-white/60 px-2 py-3 text-center ring-1 ring-[#0a1f44]/10 shadow-sm">
@@ -143,7 +143,7 @@ export default function MyInfoComp() {
               </motion.div>
               <motion.div variants={pop} className="flex flex-col items-center rounded-lg bg-white/60 px-2 py-3 text-center ring-1 ring-[#0a1f44]/10 shadow-sm">
                 <Users className="h-4 w-4 text-[#00897b] mb-1" />
-                <div className="text-lg font-bold text-[#0a1f44]">8+</div>
+                <div className="text-lg font-bold text-[#0a1f44]">2+</div>
                 <div className="text-[11px] text-[#374151]">Clients</div>
               </motion.div>
             </motion.div>

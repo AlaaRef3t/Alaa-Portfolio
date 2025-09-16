@@ -43,7 +43,7 @@ const bar: Variants = {
     hidden: { width: 0 },
     show: (custom: string) => ({
         width: custom, 
-        transition: { duration: 2.5, ease: [0.22, 1, 0.36, 1] },
+        transition: { duration: 3, ease: [0.50, 1, 0.36, 1] },
     }),
 };
 

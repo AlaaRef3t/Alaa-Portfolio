@@ -153,7 +153,7 @@ export default function AboutComp() {
                 viewport={{ once: true, amount: 0.25 }}
             >
                 <motion.div variants={fadeUp} className="text-center mx-2 sm:mx-4">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#00897b]">1+</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#00897b]">0+</div>
                     <div className="text-xs sm:text-sm md:text-base text-gray-600">Years Experience</div>
                 </motion.div>
 
