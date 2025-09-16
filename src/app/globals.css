@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #0a2346;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #071a33;
+}
+
+
+html {
+    scrollbar-color: #0a2346 #f1f1f1;
+    scrollbar-width: thin;
+}
+
+
+.scroll-area::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+    background: #0a2346;
+    border-radius: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+    background: #071a33;
+}
