@@ -20,7 +20,7 @@ export default function HomePage() {
         fpsLimit: 120,
         detectRetina: true,
         particles: {
-          number: { value: 40, density: { enable: true, area: 800 } },
+          number: { value: 15, density: { enable: true, area: 800 } },
           color: { value: "#0a1f44" },
           links: {
             enable: true,
