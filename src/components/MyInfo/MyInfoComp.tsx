@@ -159,7 +159,7 @@ export default function MyInfoComp() {
             <div className="relative size-[260px] sm:size-[320px] lg:size-[360px]">
               <motion.div variants={pop}>
                 <Image
-                  src="/mypic.jpg"
+                  src="/newAlaaPic.jpg"
                   alt="Alaa Refaat"
                   width={320}
                   height={320}
