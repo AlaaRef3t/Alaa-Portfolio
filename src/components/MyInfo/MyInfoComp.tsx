@@ -72,7 +72,7 @@ export default function MyInfoComp() {
 
             <motion.div variants={fadeUp} className="mt-3 flex items-baseline gap-1 text-2xl sm:text-3xl text-[#0a1f44]">
               <TypeAnimation
-                sequence={["Front-End Developer", 2000, "UI/UX Designer", 2000, ""]}
+                sequence={["Front-End Developer", 2000, "Next.js Expert", 2000,"UI/UX Designer", 2000, ""]}
                 speed={60}
                 repeat={Infinity}
                 wrapper="span"
