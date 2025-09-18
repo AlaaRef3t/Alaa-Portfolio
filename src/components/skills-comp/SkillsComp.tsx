@@ -34,7 +34,7 @@ const barsContainer: Variants = {
     show: {
         transition: {
             delayChildren: 0.3,    
-            staggerChildren: 0.25,  
+            staggerChildren: 0.15,  
         },
     },
 };
@@ -43,7 +43,7 @@ const bar: Variants = {
     hidden: { width: 0 },
     show: (custom: string) => ({
         width: custom, 
-        transition: { duration: 3, ease: [0.50, 1, 0.36, 1] },
+        transition: { duration: 1, ease: [0.50, 1, 0.36, 1] },
     }),
 };
 
