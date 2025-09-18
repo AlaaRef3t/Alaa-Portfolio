@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Moon } from "lucide-react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import Image from "next/image";
 
 const navContainer: Variants = {
   hidden: { opacity: 0, y: -16 },
@@ -58,7 +59,7 @@ export default function NavbarComp() {
               href="#home"
               className="font-extrabold tracking-wide text-white hover:text-emerald-100 px-2 hidden sm:inline-block"
             >
-              AR
+              Alaa Refaat
             </a>
 
             {/* Mob menu*/}
@@ -157,8 +158,10 @@ export default function NavbarComp() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.25, duration: 0.35 }}
           >
-            <button className="btn btn-ghost btn-circle text-white hover:bg-white/15" aria-label="toggle theme" type="button">
-              <Moon className="h-5 w-5" />
+            <button className="btn btn-ghost btn-circle text-white hover:bg-white/15" type="button">
+              {/* <Moon className="h-5 w-5" /> */}
+
+              <Image src="/MyLogo2.png" alt="AR Logo" width={35} height={35} />
             </button>
           </motion.div>
         </nav>
