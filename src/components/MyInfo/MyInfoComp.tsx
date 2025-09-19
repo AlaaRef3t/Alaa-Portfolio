@@ -8,6 +8,37 @@ import { ChevronDown, Linkedin, Github, Mail, Briefcase, FolderGit2, Users } fro
 import { motion } from "framer-motion";
 
 
+function NameShimmer({ text, className = "" }: { text: string; className?: string }) {
+  return (
+    <span className={`relative inline-block leading-tight ${className}`}>
+      <span
+        className="bg-clip-text text-transparent"
+        style={{ backgroundImage: "linear-gradient(90deg,#0a1f44 0%,#00897b 50%,#0a1f44 100%)" }}
+      >
+        {text}
+      </span>
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(90deg,transparent,black,transparent)]"
+      >
+        <span
+          className="absolute -inset-y-1 -left-1/3 w-1/3 skew-x-12 bg-white/40 blur-[2px]"
+          style={{ animation: "shine 2800ms linear infinite" }}
+        />
+      </span>
+
+      <style jsx>{`
+        @keyframes shine {
+          0% { transform: translateX(0); opacity: 0; }
+          10% { opacity: 1; }
+          60% { opacity: 1; }
+          100% { transform: translateX(400%); opacity: 0; }
+        }
+      `}</style>
+    </span>
+  );
+}
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -37,17 +68,13 @@ const pop = {
 
 export default function MyInfoComp() {
   return (
-    <main
-      id="home"
-      className="relative min-h-screen overflow-hidden">
-
+    <main id="home" className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <HomePage />
       </div>
 
       <section className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pt-28 pb-16 lg:mt-5 sm:mt-5">
         <div className="grid items-center gap-10 md:grid-cols-2">
-
           <motion.div
             className="text-left"
             variants={container}
@@ -65,9 +92,7 @@ export default function MyInfoComp() {
               variants={fadeUp}
               className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight"
             >
-              <span className="bg-gradient-to-r from-[#0a1f44] to-[#00897b] bg-clip-text text-transparent">
-                Alaa Refaat
-              </span>
+              <NameShimmer text="Alaa Refaat" />
             </motion.h1>
 
             <motion.div variants={fadeUp} className="mt-3 flex items-baseline gap-1 text-2xl sm:text-3xl text-[#0a1f44]">
@@ -83,7 +108,6 @@ export default function MyInfoComp() {
             <motion.p variants={fadeUp} className="mt-4 max-w-prose text-[#374151]">
               I build fast, accessible web experiences with React & Next.js.
             </motion.p>
-
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -101,7 +125,6 @@ export default function MyInfoComp() {
                 Contact Me
               </a>
             </motion.div>
-
 
             <motion.div variants={fadeUp} className="mt-6 flex items-center gap-3">
               <a
@@ -129,7 +152,6 @@ export default function MyInfoComp() {
               </a>
             </motion.div>
 
-
             <motion.div variants={fadeUp} className="mt-8 grid grid-cols-3 max-w-sm gap-2">
               <motion.div variants={pop} className="flex flex-col items-center rounded-lg bg-white/60 px-2 py-3 text-center ring-1 ring-[#0a1f44]/10 shadow-sm">
                 <Briefcase className="h-4 w-4 text-[#00897b] mb-1" />
@@ -148,7 +170,6 @@ export default function MyInfoComp() {
               </motion.div>
             </motion.div>
           </motion.div>
-
 
           <motion.div
             className="mx-auto"
@@ -172,7 +193,6 @@ export default function MyInfoComp() {
           </motion.div>
         </div>
 
-
         <motion.a
           href="#about"
           aria-label="Scroll to next section"
@@ -183,7 +203,6 @@ export default function MyInfoComp() {
         >
           <ChevronDown className="h-5 w-5" />
         </motion.a>
-
       </section>
     </main>
   );
