@@ -3,7 +3,7 @@
 import { useCallback, useMemo } from "react";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim"; // خفيف
+import { loadSlim } from "tsparticles-slim"; 
 
 
 
@@ -12,7 +12,7 @@ export default function HomePage() {
     await loadSlim(engine);
   }, []);
 
-  // إعدادات Responsive + Reduced Motion
+
   const opts = useMemo(() => {
     const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches;
     const prefersReduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -74,7 +74,7 @@ export default function HomePage() {
     <Particles
       id="tsparticles"
       init={init}
-      options={opts as any}
+      options={opts}
       style={{ position: "absolute", inset: 0, zIndex: 0 }}
     />
   );
