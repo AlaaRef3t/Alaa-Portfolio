@@ -5,26 +5,41 @@ import { Moon } from "lucide-react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Image from "next/image";
 
+const EASE_SOFT: [number, number, number, number] = [0.4, 0, 0.2, 1];
+
 const navContainer: Variants = {
-  hidden: { opacity: 0, y: -16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: -10 },
+  show: { 
+    opacity: 1, y: 0, 
+    transition: { duration: 0.6, ease: EASE_SOFT }
+  },
 };
 
 const linksStagger: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.06, delayChildren: 0.15 } },
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.25 } },
 };
 
 const linkItem: Variants = {
-  hidden: { opacity: 0, y: -6 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+  hidden: { opacity: 0, y: -4 },
+  show: { 
+    opacity: 1, y: 0, 
+    transition: { duration: 0.45, ease: EASE_SOFT }
+  },
 };
 
 const mobileMenuAnim: Variants = {
-  hidden: { opacity: 0, y: -8, scale: 0.98 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.25 } },
-  exit: { opacity: 0, y: -6, scale: 0.98, transition: { duration: 0.18 } },
+  hidden: { opacity: 0, y: -10, scale: 0.97, filter: "blur(4px)" },
+  show: {
+    opacity: 1, y: 0, scale: 1, filter: "blur(0px)",
+    transition: { type: "spring", stiffness: 240, damping: 22 }
+  },
+  exit: {
+    opacity: 0, y: -8, scale: 0.97, filter: "blur(4px)",
+    transition: { duration: 0.25, ease: EASE_SOFT }
+  },
 };
+
 
 export default function NavbarComp() {
   const [open, setOpen] = useState(false);

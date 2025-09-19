@@ -12,17 +12,17 @@ const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.15 }
+    transition: { staggerChildren: 0.18, delayChildren: 0.15 }
   }
 };
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 16 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as const  
+      duration: 1.0,
+      ease: [0.25, 0.1, 0.25, 1] as const
     }
   }
 };
@@ -40,14 +40,14 @@ export default function MyInfoComp() {
     <main
       id="home"
       className="relative min-h-screen overflow-hidden">
- 
+
       <div className="absolute inset-0 -z-10">
         <HomePage />
       </div>
 
       <section className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pt-28 pb-16 lg:mt-5 sm:mt-5">
         <div className="grid items-center gap-10 md:grid-cols-2">
-       
+
           <motion.div
             className="text-left"
             variants={container}
@@ -72,7 +72,7 @@ export default function MyInfoComp() {
 
             <motion.div variants={fadeUp} className="mt-3 flex items-baseline gap-1 text-2xl sm:text-3xl text-[#0a1f44]">
               <TypeAnimation
-                sequence={["Front-End Developer", 2000, "Next.js Expert", 2000,"UI/UX Designer", 2000, ""]}
+                sequence={["Front-End Developer", 2000, "Next.js Expert", 2000, "UI/UX Designer", 2000, ""]}
                 speed={60}
                 repeat={Infinity}
                 wrapper="span"
@@ -84,7 +84,7 @@ export default function MyInfoComp() {
               I build fast, accessible web experiences with React & Next.js.
             </motion.p>
 
-            
+
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="/Alaa-Refaat-resume.pdf"
@@ -102,7 +102,7 @@ export default function MyInfoComp() {
               </a>
             </motion.div>
 
-          
+
             <motion.div variants={fadeUp} className="mt-6 flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/in/alaa-ref3t-x1/"
@@ -129,7 +129,7 @@ export default function MyInfoComp() {
               </a>
             </motion.div>
 
-           
+
             <motion.div variants={fadeUp} className="mt-8 grid grid-cols-3 max-w-sm gap-2">
               <motion.div variants={pop} className="flex flex-col items-center rounded-lg bg-white/60 px-2 py-3 text-center ring-1 ring-[#0a1f44]/10 shadow-sm">
                 <Briefcase className="h-4 w-4 text-[#00897b] mb-1" />
@@ -149,7 +149,7 @@ export default function MyInfoComp() {
             </motion.div>
           </motion.div>
 
-          
+
           <motion.div
             className="mx-auto"
             initial="hidden"
@@ -172,7 +172,7 @@ export default function MyInfoComp() {
           </motion.div>
         </div>
 
-      
+
         <motion.a
           href="#about"
           aria-label="Scroll to next section"
